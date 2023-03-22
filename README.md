@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: There was a typo error in the toys_controllers. In line 10 it was written _toy = Toys.create(toy_params)_ instead of _toy = Toy.create(toy_params)_. I changed the name to _Toy_ and the error was debugged.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: There was a error; Unpermitted parameter: :id refering to toys_controller line 16. I debugged it by permitting id in the update controller as _params.permit(:name, :description, :likes, :id)_
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: I debugged this by including the destroy route in the routes.rb file as it was not initially included.
